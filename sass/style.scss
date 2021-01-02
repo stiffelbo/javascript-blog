@@ -129,3 +129,41 @@ body {
         margin: 0 10px 0 0;
     }
 }
+
+@mixin tagCustom($font-size,
+$bg-color) {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    padding: 0.2em;
+    border: none;
+    border-radius: 0.2em;
+    font-size: $font-size;
+    background-color: $bg-color;
+}
+
+.tag-size-1 {
+    @include tagCustom(1em,
+    #636e72);
+}
+
+.tag-size-2 {
+    @include tagCustom(1.15em,
+    #74b9ff);
+}
+
+.tag-size-3 {
+    @include tagCustom(1.3em,
+    #6c5ce7);
+}
+
+.tag-size-4 {
+    @include tagCustom(1.5em,
+    #fdcb6e);
+}
+
+.tag-size-5 {
+    @include tagCustom(1.75em,
+    #e84393);
+}
