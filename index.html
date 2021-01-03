@@ -216,6 +216,32 @@
             </main>
         </div>
     </div>
+    <!--Handlebars templates-->
+
+    <!--1. dla linka do artykułu, umieszczanego w lewej kolumnie-->
+    <script id="template-article-link" type="text/x-handlebars-template">
+        <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+    </script>
+    <!--2. dla linka do tagu, umieszczanego na końcu każdego artykułu-->
+    <script id="template-article-tag" type="text/x-handlebars-template">
+        <li><a href="#tag-{{tag}}">{{ tag }}</a></li>
+    </script>
+    <!--3. dla linka do autora, umieszczanego pod tytułem każdego artykułu-->
+    <script id="template-article-author" type="text/x-handlebars-template">
+        by <a href="#author-{{author}}">{{ author }}</a>
+    </script>
+    <!--4. dla linka do tagu, umieszczanego w chmurze tagów w prawej kolumnie-->
+    <script id="template-tagCloudLink" type="text/x-handlebars-template">
+        {{#each tags}}
+        <li><a href="#tag-{{tag}}" class="{{className}}"><span>{{ tag }} ({{count}})</span></a></li>
+        {{/each}}
+    </script>
+    <!--5. dla linka do autora, umieszczanego na liście w prawej kolumnie-->
+    <script id="template-all-authors" type="text/x-handlebars-template">
+        <li><a href="#author-{{author}}">{{ author }}</a></li>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
